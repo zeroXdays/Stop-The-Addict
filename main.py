@@ -72,7 +72,7 @@ def is_admin():
     except:
         return False
 if is_admin():
-    print("WIP")
+    print("Thank you for using StopTheAddict version 0.8! For the newest information on our services please join our discord server: https://discord.gg/2pBwpv2VyY")
 else:
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
 
