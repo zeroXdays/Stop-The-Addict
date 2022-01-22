@@ -27,6 +27,8 @@ rustclash = '    127.0.0.1       rustclash.com'
 rustcases = '    127.0.0.1       rustcases.com'
 rustkingdom = '    127.0.0.1       rustkingdom.gg'
 rustcase = '    127.0.0.1       rustcase.com'
+rustblaze = '    127.0.0.1       rustblaze.com'
+gains = '    127.0.0.1       gains.gg'
 
 #Trading Sites & Buying Sites
 tradeit = '    127.0.0.1       tradeit.gg'
@@ -56,6 +58,7 @@ thunderpick = '    127.0.0.1       thunderpick.com'
 skinbet = '    127.0.0.1       skinbet.gg'
 hellstore = '    127.0.0.1       hellstore.net'
 bounty = '    127.0.0.1       bounty.gg'
+roobet = '    127.0.0.1       roobet.com'
 
 hosts = open("C:\Windows\System32\drivers\etc\hosts", "r")
 readfile = hosts.read()
@@ -165,6 +168,11 @@ if yes_or_no("Would you like to block regular gambling sites & CS:GO gambling si
     else:
         hostsappend.write("\n" + bounty)
         print('Bounty has been blocked.')
+    if roobet in readfile:
+        print('Roobet is already listed. ')
+    else:
+        hostsappend.write("\n" + roobet)
+        print('Roobet has been blocked.')
 else:
     print("Regular gambling sites & CS:GO gambling sites were not blocked.")
 
@@ -240,6 +248,16 @@ if yes_or_no("Would you like to block skin-gambling sites?"):
     else:
         hostsappend.write("\n" + rustcases)
         print('RustCases has been blocked.')
+    if rustblaze in readfile:
+        print('RustBlaze is already listed. ')
+    else:
+        hostsappend.write("\n" + rustblaze)
+        print('RustBlaze has been blocked.')
+    if gains in readfile:
+        print('Gains is already listed. ')
+    else:
+        hostsappend.write("\n" + gains)
+        print('Gains has been blocked.')
 else:
     print("No skin-gambling sites were blocked.")
 
